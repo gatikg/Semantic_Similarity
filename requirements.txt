@@ -1,0 +1,14 @@
+bert-extractive-summarizer==0.10.1
+data==0.4
+dataset==1.5.2
+datasets==2.8.0
+Flask==2.2.2
+Flask-WTF==1.1.1
+happytransformer==2.4.1
+requests @ file:///C:/b/abs_41owkd5ymz/croot/requests_1682607524657/work
+spacy-transformers==1.2.0
+tensorflow==2.12.0
+tokenizers @ file:///C:/ci/tokenizers_1651821358528/work
+traitlets==5.8.1
+transformers==4.25.1
+sentence_transformers==2.2.2
