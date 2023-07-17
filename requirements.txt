@@ -1,8 +1,8 @@
 bert-extractive-summarizer==0.10.1
-data==0.4
 Flask==2.2.2
 Flask-WTF==1.1.1
 happytransformer==2.4.1
 spacy-transformers==1.2.0
+gunicorn==20.1.0
 transformers==4.25.1
 sentence_transformers==2.2.2
