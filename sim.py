@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify, render_template
-from scipy.spatial.distance import cosine
 from sentence_transformers import SentenceTransformer
+import os
 
 app = Flask(__name__)
 
 # Load the pre-trained model
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("distilbert-base-nli-stsb-mean-tokens")
 
 # Home page with form to input text1 and text2
 @app.route("/", methods=["GET"])
@@ -32,4 +32,4 @@ def calculate_similarity():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
