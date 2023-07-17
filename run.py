@@ -7,6 +7,7 @@ app = Flask(__name__)
 # Load the pre-trained model
 model = SentenceTransformer("distilbert-base-nli-mean-tokens")
 
+
 # Home page with form to input text1 and text2
 @app.route("/", methods=["GET"])
 def home():
