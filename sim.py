@@ -8,9 +8,6 @@ app = Flask(__name__)
 # Load the pre-trained model
 model = SentenceTransformer("stsb-roberta-large")
 
-# Load the data into a DataFrame
-data = pd.read_csv(r"Precily_Text_Similarity.csv")
-
 
 # Home page with form to input text1 and text2
 @app.route("/", methods=["GET"])
@@ -37,4 +34,4 @@ def calculate_similarity():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, host="0.0.0.0")
+    app.run(debug=True)
