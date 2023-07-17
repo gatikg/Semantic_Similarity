@@ -1,16 +1,11 @@
 from flask import Flask, request, jsonify, render_template
-import pandas as pd
 from scipy.spatial.distance import cosine
 from sentence_transformers import SentenceTransformer
-from waitress import serve
 
 app = Flask(__name__)
 
 # Load the pre-trained model
 model = SentenceTransformer("all-MiniLM-L6-v2")
-
-# Load the data into a DataFrame
-
 
 # Home page with form to input text1 and text2
 @app.route("/", methods=["GET"])
@@ -37,4 +32,4 @@ def calculate_similarity():
 
 
 if __name__ == "__main__":
-    serve(app, host="0.0.0.0", port=50100)
+    app.run(debug=False)
